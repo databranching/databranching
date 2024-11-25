@@ -1,0 +1,16 @@
+---
+const { headings } = Astro.props;
+---
+
+<ul>
+  {
+    headings.map((heading) => {
+      const { depth, slug, text } = heading;
+      return (
+        <li style={{ marginLeft: `${depth * 16}px` }}>
+          <a href={`#${slug}`}>{text}</a>
+        </li>
+      );
+    })
+  }
+</ul>

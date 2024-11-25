@@ -1,0 +1,36 @@
+---
+import { getCollection } from 'astro:content';
+
+import Main from '../../layouts/main.astro';
+import TableOfContents from '../../components/table-of-contents.astro';
+
+export const reports = await getCollection('reports');
+
+export async function getStaticPaths() {
+  return reports.map((report) => {
+    return {
+      params: {
+        slug: report.slug,
+      },
+      props: {
+        report,
+      },
+    };
+  });
+}
+
+const {
+  report,
+  report: {
+    data: { title },
+  },
+} = Astro.props;
+
+const { Content, headings } = await report.render();
+---
+
+<Main>
+  <TableOfContents headings={headings} />
+  <h1>{title}</h1>
+  <Content />
+</Main>

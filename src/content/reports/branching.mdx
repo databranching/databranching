@@ -1,0 +1,53 @@
+---
+title: Branching
+---
+
+A closer look at database branches: how they work and what to keep in mind when choosing a serverless database provider.
+
+If you're coming from the Git versioning world of programming, you’ll be familiar with the concept of a branch, and regardless of your Git provider, GitHub, GitLab, BitBucket etc, code branching always works in the same way. You branch off from e.g main, which creates an exact replica of the code base from that point in time.
+
+From here you’re able to develop new features, track down and fix bugs, all from the safety of an isolated environment and, when you’re ready, you can create a Pull Request, then merge the changes back into the main branch.
+
+But, does database branching work in the same way?
+
+In this post I'll discuss: What a database branch is, the different ways they work across three popular providers, Neon, PlanetScale and Supabase, and how much they cost.
+
+## What is a database branch?
+
+At first glance, you might assume a database branch will work just like a code branch. But since a database has two distinct components, branching actually plays out a bit differently.
+
+First, there’s the database schema. This schema lays out the structure of the data, things like data types, table names, and the relationships between tables.
+
+Secondly you have the actual data itself, and there could be loads of it!
+
+Understandably, for a database to be a database, both schema and data need to co-exist. So one would assume then, when creating a branch from e.g main, you’d create an exact replica of the schema and data from that point in time. Only some database providers work this way, while others only replicate the schema, and require you to seed the database with dummy data. There are pros and cons to each approach, and in the next section I’ll discuss what they are.
+
+## Production vs synthetic data in database branches
+
+Production data is when you branch off from e.g main, and much like with a codebase, your branch is an exact replica of production and uses the same schema and data.
+
+Synthetic data relates to a database branch that only replicates the schema, but the data is synthetically created using a seeding step, or perhaps an anonymized subset of data from the production database
+
+### Is testing with synthetic data good?
+
+You can use synthetic data to test new features or investigate specific bugs. For instance, if you have populated your branch with synthetic data this approach would let you track down a bug for a field like `is_admin` that was mistakenly set to `VARCHAR(255)` instead of `BOOLEAN`, or perhaps you could create a new feature and add a new field, such as user_age, for a form. In these kinds of cases, synthetic data is fine as it’s the data types that matter, not the amount of data.
+
+### Is testing with production data better?
+
+Testing with a smaller amount of synthetic data means the database won’t behave as it does in production environments. Both PostgreSQL’s query planner and MySQL’s optimizer rely on data distribution statistics to create efficient execution plans. With production data, they can accurately assess whether to use an index or a sequential scan or pick the best path for complex queries involving joins and subqueries. With synthetic data, the lack of realistic distribution can cause the optimizer to make suboptimal choices. This can result in queries that appear fast in development / testing, but slow down significantly in production.
+
+### Is production data safe to use?
+
+In some cases replicating production data is simply not permitted. Many industries such as healthcare, finance, education, insurance, and government, restrict access to customer data, making it challenging for developers to test against production data. In such cases, sensitive user data, or specific fields within specific tables must be anonymized, and if this is required for each and every branch that is created, it could take a significant amount of time to create a new branch and subsequently impact developer productivity.
+
+That said, many applications don’t contain PII (Personally Identifiable Information). PII generally refers to "user data", or more specifically, some fields within user tables but, in many cases data stored in the database isn’t related to individual users at all. In these situations, you’d almost always want a development branch that includes real production data.
+
+### Key takeaways
+
+Ultimately, there’s no one-size-fits-all answer. If your data is sensitive, you’ll need to add a step to your branching process to either generate synthetic data, or anonymize production data. But if your data isn’t subject to PII regulations, branching with production data is often a better choice.
+
+| Provider    | Data + Schema | Schema only |
+| ----------- | ------------- | ----------- |
+| Neon        | ✅            | ⚠️          |
+| Supabase    | ❌            | ✅          |
+| PlanetScale | ⚠️            | ✅          |
