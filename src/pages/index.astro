@@ -1,7 +1,64 @@
 ---
 import Main from '../layouts/main.astro';
+import Logo from '../components/logo.astro';
+import Github from '../icons/github.astro';
+import Table from '../components/table.astro';
+import BranchTypesDiagram from '../sections/branch-types-diagram.svg';
 ---
 
-<Main>
-  <h1>index.astro</h1>
+<Main className='text-brand-text'>
+  <div class='flex flex-col min-h-screen h-full'>
+    <Logo className='w-64 sm:w-96' />
+    <div class='flex'>
+      <div class='flex flex-col gap-48 pt-8 pb-32'>
+        <section>
+          <h1 class='text-2xl sm:text-4xl mb-4 font-semibold'>
+            A closer look at database branches: how they work and what to keep in mind when choosing a serverless
+            database provider.
+          </h1>
+          <p class='text-lg mb-8'>
+            A more detailed look at database branching and provider offerings can be found in the report.
+          </p>
+          <a href='/reports/branching' class='px-6 py-3 bg-brand-salmon no-underline rounded-sm !text-brand-text'
+            >Read Report</a
+          >
+        </section>
+        <section>
+          <h2 class='text-3xl sm:text-5xl font-semibold mt-0 mb-4 text-center'>Branch Types</h2>
+          <p class='text-lg text-center mx-auto max-w-3xl mb-16'>
+            A database branch is like a Git branch, but it includes two distinct attributes: data and schema. Different
+            providers offer different types when creating branches.
+          </p>
+          <div class='mx-auto max-w-xl mb-16'>
+            <img src={BranchTypesDiagram.src} alt='branch types diagram' />
+          </div>
+          <div class='mx-auto max-w-2xl'>
+            <Table
+              tableHeaders={['Provider', 'Data + Schema', 'Schema Only']}
+              tableRows={[
+                ['Neon', 'check', 'warning'],
+                ['Supbase', 'cross', 'check'],
+                ['PlanetScale', 'check', 'check'],
+              ]}
+            />
+          </div>
+        </section>
+      </div>
+    </div>
+    <section>
+      <h2 class='text-2xl sm:text-4xl font-heading uppercase font-bold mb-4'>contribute</h2>
+      <p class='text-lg mb-8'>
+        Databranching is an Open-source MIT licensed project. Contributions from all providers are welcome. If you'd
+        like to add a provider, or make changes to existing providers, follow the instructions in the repository
+        <a href='https://github.com/databranching/databranching' class='text-brand-salmon underline'> README</a>.
+      </p>
+      <a
+        href='https://github.com/databranching/databranching'
+        class='inline-flex gap-2 items-center px-6 py-3 bg-brand-salmon no-underline rounded-sm !text-brand-text'
+      >
+        <Github />
+        Data Branching</a
+      >
+    </section>
+  </div>
 </Main>

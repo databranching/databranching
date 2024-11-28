@@ -1,8 +1,23 @@
+---
+const { className } = Astro.props;
+
+import '@fontsource/orbitron/400.css';
+import '@fontsource/orbitron/500.css';
+import '@fontsource/orbitron/700.css';
+import '@fontsource/orbitron/900.css';
+
+interface Props {
+  className?: string;
+}
+---
+
 <html lang='en'>
   <head>
     <meta charset='utf-8' />
   </head>
-  <body class='prose bg-brand-background'>
-    <slot />
+  <body class='bg-brand-background'>
+    <main class={`p-8 sm:px-16 sm:py-20 mx-auto max-w-6xl ${className}`}>
+      <slot />
+    </main>
   </body>
 </html>

@@ -29,8 +29,16 @@ const {
 const { Content, headings } = await report.render();
 ---
 
-<Main>
-  <TableOfContents headings={headings} />
-  <h1>{title}</h1>
-  <Content />
+<Main className='prose prose-lg'>
+  <section class='block xl:flex gap-8'>
+    <aside class='hidden xl:block relative order-2'>
+      <div class='fixed'>
+        <TableOfContents headings={headings} />
+      </div>
+    </aside>
+    <div class='w-full xl:w-9/12'>
+      <h1>{title}</h1>
+      <Content />
+    </div>
+  </section>
 </Main>
