@@ -2,6 +2,8 @@
 title: Branching
 ---
 
+import BranchTypesTable from '../../sections/branch-types-table.astro';
+
 A closer look at database branches: how they work and what to keep in mind when choosing a serverless database provider.
 
 If you're coming from the Git versioning world of programming, you’ll be familiar with the concept of a branch, and regardless of your Git provider, GitHub, GitLab, BitBucket etc, code branching always works in the same way. You branch off from e.g main, which creates an exact replica of the code base from that point in time.
@@ -46,8 +48,4 @@ That said, many applications don’t contain PII (Personally Identifiable Inform
 
 Ultimately, there’s no one-size-fits-all answer. If your data is sensitive, you’ll need to add a step to your branching process to either generate synthetic data, or anonymize production data. But if your data isn’t subject to PII regulations, branching with production data is often a better choice.
 
-| Provider    | Data + Schema | Schema only |
-| ----------- | ------------- | ----------- |
-| Neon        | ✅            | ⚠️          |
-| Supabase    | ❌            | ✅          |
-| PlanetScale | ⚠️            | ✅          |
+<BranchTypesTable />

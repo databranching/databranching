@@ -2,8 +2,9 @@
 import Main from '../layouts/main.astro';
 import Logo from '../components/logo.astro';
 import Github from '../icons/github.astro';
-import Table from '../components/table.astro';
+
 import BranchTypesDiagram from '../sections/branch-types-diagram.svg';
+import BranchTypesTable from '../sections/branch-types-table.astro';
 ---
 
 <Main className='text-brand-text'>
@@ -33,14 +34,7 @@ import BranchTypesDiagram from '../sections/branch-types-diagram.svg';
             <img src={BranchTypesDiagram.src} alt='branch types diagram' />
           </div>
           <div class='mx-auto max-w-2xl'>
-            <Table
-              tableHeaders={['Provider', 'Data + Schema', 'Schema Only']}
-              tableRows={[
-                ['Neon', 'check', 'warning'],
-                ['Supbase', 'cross', 'check'],
-                ['PlanetScale', 'check', 'check'],
-              ]}
-            />
+            <BranchTypesTable />
           </div>
         </section>
       </div>
