@@ -1,0 +1,26 @@
+---
+const { className } = Astro.props;
+
+interface Props {
+  className?: string;
+}
+---
+
+<svg
+  version='1.1'
+  xmlns='http://www.w3.org/2000/svg'
+  xmlns:xlink='http://www.w3.org/1999/xlink'
+  x='0px'
+  y='0px'
+  viewBox='0 0 52 27'
+  class={`${className}`}
+>
+  <g>
+    <path
+      class='fill-brand-salmon'
+      d='M27.58,10.86V4.89c0-2.7-2.19-4.89-4.89-4.89H4.89C2.19,0,0,2.19,0,4.89v17.25
+		c0,2.7,2.19,4.89,4.89,4.89h17.79c2.7,0,4.89-2.19,4.89-4.89v-5.97l24.89,0v-5.31H27.58z M22.6,21.79c0,0.3-0.24,0.54-0.54,0.54
+		H5.7c-0.3,0-0.54-0.24-0.54-0.54V5.44c0-0.3,0.24-0.54,0.54-0.54h16.35c0.3,0,0.54,0.24,0.54,0.54V21.79z'
+    ></path>
+  </g>
+</svg>
