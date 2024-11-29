@@ -22,30 +22,36 @@ const getIconComponent = (item) => {
 };
 ---
 
-<table class='table-auto border-collapse border border-brand-border w-full'>
-  <thead>
-    <tr>
+<div class='overflow-x-auto'>
+  <table class='table-auto border-collapse border border-brand-border w-full min-w-[600px]'>
+    <thead>
+      <tr>
+        {
+          tableHeaders.map((header) => {
+            return (
+              <th class='font-semibold text-center uppercase border border-brand-border bg-brand-surface p-2'>
+                {header}
+              </th>
+            );
+          })
+        }
+      </tr>
+    </thead>
+    <tbody>
       {
-        tableHeaders.map((header) => {
-          return <th class='font-semibold text-center border border-brand-border bg-brand-surface p-2'>{header}</th>;
+        tableRows.map((row) => {
+          return (
+            <tr>
+              {row.map((item) => {
+                const Icon = getIconComponent(item);
+                return (
+                  <td class='border border-brand-border p-2'>{Icon ? <Icon className='mx-auto size-6' /> : item}</td>
+                );
+              })}
+            </tr>
+          );
         })
       }
-    </tr>
-  </thead>
-  <tbody>
-    {
-      tableRows.map((row) => {
-        return (
-          <tr>
-            {row.map((item) => {
-              const Icon = getIconComponent(item);
-              return (
-                <td class='border border-brand-border p-2'>{Icon ? <Icon className='mx-auto size-6' /> : item}</td>
-              );
-            })}
-          </tr>
-        );
-      })
-    }
-  </tbody>
-</table>
+    </tbody>
+  </table>
+</div>
