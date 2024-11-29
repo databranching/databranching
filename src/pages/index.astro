@@ -8,6 +8,8 @@ import BranchTypesTable from '../sections/branch-types-table.astro';
 
 import BranchingWorkflowsDiagram from '../sections/branching-workflows-diagram.svg';
 import BranchingWorkflowsTable from '../sections/branching-workflows-table.astro';
+
+import BranchCreationSpeed from '../sections/branch-creation-speed.astro';
 ---
 
 <Main className='text-brand-text'>
@@ -28,6 +30,7 @@ import BranchingWorkflowsTable from '../sections/branching-workflows-table.astro
           >
         </div>
       </section>
+
       <section>
         <h2 class='section-h2 text-center'>Branch Types</h2>
         <p class='section-p text-center mx-auto'>
@@ -57,6 +60,22 @@ import BranchingWorkflowsTable from '../sections/branching-workflows-table.astro
           </div>
         </div>
       </section>
+
+      <section>
+        <h2 class='section-h2 text-center'>Branch Creation Speed</h2>
+        <p class='section-p text-center mx-auto'>
+          Creating a codebase branch is usually instant but, creating a database branch, of any type, can take longer
+          than expected, which could impact developer productivity.
+        </p>
+        <div class='mx-auto max-w-xl mb-16'>
+          <BranchCreationSpeed />
+          <small class='block mt-4 text-brand-secondary text-center italic font-light'
+            >*PlanetScale can create Data + Schema branches but the time it takes is determined by the size of the
+            database, unilke Neon which is instant.</small
+          >
+        </div>
+      </section>
+
       <section>
         <h2 class='text-2xl sm:text-4xl font-heading uppercase font-bold mb-4 text-center sm:text-left'>contribute</h2>
         <p class='text-lg mb-8 text-center sm:text-left'>

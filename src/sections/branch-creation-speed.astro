@@ -1,0 +1,44 @@
+---
+import VerticleBarChart, { type DataItem } from '../components/verticle-bar-chart.astro';
+
+const dataSchema: DataItem[] = [
+  {
+    name: 'Neon',
+    value: 0,
+    style: 'solid',
+  },
+];
+
+const schemaOnly: DataItem[] = [
+  {
+    name: 'PlanetScale',
+    value: 0.5,
+    style: 'dashed',
+  },
+  {
+    name: 'Supabase',
+    value: 5,
+    style: 'diagonal',
+  },
+];
+
+const maxValue = Math.max(...[...dataSchema, ...schemaOnly].map((item) => item.value));
+const dataLength = new Array([...dataSchema, ...schemaOnly].length).fill(null);
+---
+
+<div class='flex gap-4 sm:gap-8 justify-center'>
+  <VerticleBarChart
+    title='Data + Schema'
+    label='Time (minutes)'
+    data={dataSchema}
+    maxValue={maxValue}
+    dataLength={dataLength}
+  />
+  <VerticleBarChart
+    title='Schema Only'
+    label='Time (minutes)'
+    data={schemaOnly}
+    maxValue={maxValue}
+    dataLength={dataLength}
+  />
+</div>
