@@ -1,0 +1,13 @@
+@tailwind base;
+
+@layer base {
+  .section-h1 {
+    @apply text-xl sm:text-4xl mb-4 font-semibold;
+  }
+  .section-h2 {
+    @apply text-3xl sm:text-5xl font-semibold mt-0 mb-4;
+  }
+  .section-p {
+    @apply text-lg max-w-3xl mb-16;
+  }
+}
