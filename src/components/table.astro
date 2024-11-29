@@ -12,7 +12,7 @@ interface Props {
   tableRows: (string | IconName)[][];
 }
 
-const getIconComponent = (item) => {
+const getIconComponent = (item: IconName) => {
   const icons = {
     check: Check,
     cross: Cross,
@@ -22,14 +22,14 @@ const getIconComponent = (item) => {
 };
 ---
 
-<div class='overflow-x-auto'>
-  <table class='table-auto border-collapse border border-brand-border w-full min-w-[600px]'>
+<div class='overflow-x-auto border border-brand-border'>
+  <table class='text-xs sm:text-base border-collapse table-auto border-none w-full min-w-[600px]'>
     <thead>
-      <tr>
+      <tr class='border-b border-b-brand-border bg-brand-surface'>
         {
           tableHeaders.map((header) => {
             return (
-              <th class='font-semibold text-center uppercase border border-brand-border bg-brand-surface p-2'>
+              <th class='font-semibold text-center uppercase first:border-r first:border-r-brand-border last:border-l last:border-l-brand-border p-2'>
                 {header}
               </th>
             );
@@ -41,11 +41,13 @@ const getIconComponent = (item) => {
       {
         tableRows.map((row) => {
           return (
-            <tr>
-              {row.map((item) => {
-                const Icon = getIconComponent(item);
+            <tr class='border-t border-t-brand-border'>
+              {row.map((item): IconName => {
+                const Icon = getIconComponent(item as IconName);
                 return (
-                  <td class='border border-brand-border p-2'>{Icon ? <Icon className='mx-auto size-6' /> : item}</td>
+                  <td class=' first:border-r first:border-r-brand-border last:border-l last:border-l-brand-border p-2'>
+                    {Icon ? <Icon className='mx-auto size-5 sm:size-6' /> : item}
+                  </td>
                 );
               })}
             </tr>
