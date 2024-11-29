@@ -1,0 +1,168 @@
+---
+const { title, label, data, maxValue, dataLength, className } = Astro.props;
+
+export interface DataItem {
+  name: string;
+  value: number;
+  style: string;
+}
+
+interface Props {
+  title: string;
+  label: string;
+  data: DataItem[];
+  maxValue: number;
+  dataLength: number[];
+  className?: string;
+}
+
+const leftPadding = 90;
+const bottomPadding = 70;
+
+const chartWidth = 300;
+const chartHeight = 600;
+
+const yAxis = new Array(maxValue + 1).fill(null).map((_, index) => index);
+const scale = chartHeight / yAxis.length;
+
+const barPadding = 20;
+
+const properties = dataLength
+  .map((_, index) => {
+    const item = data[index];
+
+    const barWidth = (chartWidth - leftPadding) / dataLength.length;
+    const barMinHeight = 4;
+
+    if (item) {
+      const { name, value, style } = item;
+
+      const barHeight = (value / maxValue) * (chartHeight - bottomPadding);
+
+      return {
+        barX: barWidth * index + leftPadding + barPadding * (index + 1),
+        barY: chartHeight - bottomPadding - barHeight,
+        height: barHeight <= 0 ? barMinHeight : barHeight,
+        width: barWidth,
+        style: style,
+        name: name,
+      };
+    }
+  })
+  .filter(Boolean);
+
+const barStyles = {
+  solid: {
+    fill: '#ff6090',
+  },
+  dashed: {
+    fill: 'none',
+    stroke: '#ffc107',
+    strokeWidth: 2,
+    strokeDasharray: '10,10',
+  },
+  diagonal: {
+    fill: 'url(#diagonal-pattern)',
+    stroke: '#0091f7',
+    strokeWidth: 2,
+  },
+};
+---
+
+<div class='w-full h-full border border-brand-border bg-surface rounded p-4 sm:p-8'>
+  <strong class='text-xs sm:text-base block text-center mb-4 sm:mb-8'>{title}</strong>
+  <svg xmlns='http://www.w3.org/2000/svg' viewBox={`0 0 ${chartWidth} ${chartHeight}`} class={`${className}`}>
+    <defs>
+      {
+        properties.map((property) => {
+          if (property?.style === 'diagonal') {
+            const { stroke } = barStyles[property.style];
+            return (
+              <pattern id='diagonal-pattern' patternUnits='userSpaceOnUse' width='20' height='20'>
+                <line x1={0} y1={0} x2={20} y2={20} stroke={stroke} stroke-width={2} />
+              </pattern>
+            );
+          }
+        })
+      }
+    </defs>
+
+    <text
+      class='fill-brand-text text-xl'
+      style={{
+        transform: `translate(-58px, ${chartHeight / 2 - bottomPadding / 2}px) rotate(-90deg)`,
+        transformBox: 'border-box',
+        transformOrigin: 'center',
+        textAnchor: 'start',
+      }}
+    >
+      {label}
+    </text>
+
+    {
+      yAxis.map((value, index) => {
+        return (
+          <text
+            class='fill-brand-text text-xl'
+            style={{
+              transform: `translate(60px, ${chartHeight - index * scale - bottomPadding}px)`,
+            }}
+          >
+            {value}
+          </text>
+        );
+      })
+    }
+
+    {
+      properties.map((property) => {
+        const { barX, barY, width, height, name, style } = property as any;
+        return (
+          <rect
+            id={name}
+            x={barX}
+            y={barY}
+            width={width}
+            height={height}
+            class='fill-brand-primary'
+            style={{
+              ...barStyles[style],
+            }}
+          />
+        );
+      })
+    }
+
+    <polyline
+      points={`${leftPadding},0 ${leftPadding},${chartHeight - bottomPadding} ${chartWidth},${chartHeight - bottomPadding}`}
+      class='fill-none stroke-2 stroke-brand-border'></polyline>
+
+    {
+      properties.map((property, index) => {
+        const { name, style } = property as any;
+        const rectSize = 20;
+        const textSize = index === 0 ? 0 : 140; // this is manually for now
+        return (
+          <g
+            style={{
+              transform: `translate(${textSize}px, ${chartHeight - bottomPadding + rectSize * 2}px)`,
+            }}
+          >
+            <rect
+              x={0}
+              y={0}
+              width={rectSize}
+              height={rectSize}
+              style={{
+                ...barStyles[style],
+              }}
+            />
+            <text x={rectSize + 10} y={rectSize - 4} class='fill-brand-text text-lg'>
+              {name}
+            </text>
+          </g>
+        );
+      })
+    }
+  </svg>
+</div>
