@@ -35,8 +35,22 @@ export default {
               },
               'h1, h2, h3, h4, h5, h6': {
                 fontWeight: 600,
+                a: {
+                  fontWeight: 600,
+                  textDecoration: 'none',
+                  '&:hover': {
+                    color: theme('colors.brand.text'),
+                  },
+                },
               },
             },
+
+            p: {
+              strong: {
+                fontWeight: 800,
+              },
+            },
+
             code: {
               color: theme('colors.brand.tertiary'),
               fontWeight: 100,

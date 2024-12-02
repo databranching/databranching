@@ -2,13 +2,21 @@
 const { headings } = Astro.props;
 ---
 
-<ul class='list-none m-0 p-0'>
+<h5 class='uppercase !font-bold font-heading'>On this page</h5>
+<ul class='list-none m-0 p-0 my-2'>
   {
     headings.map((heading) => {
       const { depth, slug, text } = heading;
+
+      console.log(depth, ' | ', text);
       return (
-        <li style={{ marginLeft: `${depth * 16}px` }}>
-          <a href={`#${slug}`}>{text}</a>
+        <li style={{ marginLeft: `${depth * 8}px` }} class='m-0 p-0'>
+          <a
+            href={`#${slug}`}
+            class={`not-prose text-xs !text-brand-secondary hover:!text-brand-text ${depth === 2 ? 'font-bold' : 'font-base opacity-90'}`}
+          >
+            {text}
+          </a>
         </li>
       );
     })
