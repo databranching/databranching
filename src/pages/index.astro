@@ -17,6 +17,10 @@ import BranchBranchingTable from '../sections/branch-branching-table.astro';
 
 import ResourceIsolationDiagram from '../sections/resource-isolation-diagram.svg';
 import ResourceIsolationTable from '../sections/resource-isolation-table.astro';
+
+import BranchingCostsDiagramvHorizontal from '../sections/branching-costs-diagram-horizontal.svg';
+import BranchingCostsDiagramvVertical from '../sections/branching-costs-diagram-vertical.svg';
+import BranchingCostsTable from '../sections/branching-costs-table.astro';
 ---
 
 <Main className='text-brand-text'>
@@ -115,6 +119,23 @@ import ResourceIsolationTable from '../sections/resource-isolation-table.astro';
           <div class='mx-auto max-w-2xl'>
             <ResourceIsolationTable />
           </div>
+        </div>
+      </section>
+
+      <section>
+        <h2 class='section-h2 text-center'>Branching Costs</h2>
+        <p class='section-p text-center mx-auto'>
+          A branch uses the same resources as a new database, sometimes making it subject to billing. Some providers
+          restrict branching to paid plans often with unpredictable pricing.
+        </p>
+        <div class='hidden lg:block w-full mx-auto max-w-3xl mb-16'>
+          <img src={BranchingCostsDiagramvHorizontal.src} alt='branching costs diagram' />
+        </div>
+        <div class='block lg:hidden w-full mx-auto max-w-[14rem] mb-16 lg:mb-0'>
+          <img src={BranchingCostsDiagramvVertical.src} alt='branching costs diagram' />
+        </div>
+        <div class='mx-auto max-w-2xl'>
+          <BranchingCostsTable />
         </div>
       </section>
 
