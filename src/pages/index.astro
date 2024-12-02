@@ -10,6 +10,9 @@ import BranchingWorkflowsDiagram from '../sections/branching-workflows-diagram.s
 import BranchingWorkflowsTable from '../sections/branching-workflows-table.astro';
 
 import BranchCreationSpeed from '../sections/branch-creation-speed.astro';
+
+import BranchBranchingDiagram from '../sections/branch-branching-diagram.svg';
+import BranchBranchingTable from '../sections/branch-branching-table.astro';
 ---
 
 <Main className='text-brand-text'>
@@ -73,6 +76,22 @@ import BranchCreationSpeed from '../sections/branch-creation-speed.astro';
             >*PlanetScale can create Data + Schema branches but the time it takes is determined by the size of the
             database, unilke Neon which is instant.</small
           >
+        </div>
+      </section>
+
+      <section class='block lg:flex lg:flex-row items-center gap-16'>
+        <div class='order-2 max-w-[280px] lg:min-w-[360px] mx-auto mb-16 lg:mb-0'>
+          <img src={BranchBranchingDiagram.src} alt='branching workflows diagram' />
+        </div>
+        <div>
+          <h2 class='section-h2 text-center lg:text-left'>Branch Branching</h2>
+          <p class='section-p text-center lg:text-left'>
+            On occasion you won't want to branch directly from the main branch, but instead, you may want to branch from
+            an existing branch. Creating a branch for development, testing or staging for instance.
+          </p>
+          <div class='mx-auto max-w-2xl'>
+            <BranchBranchingTable />
+          </div>
         </div>
       </section>
 
