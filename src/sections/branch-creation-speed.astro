@@ -1,5 +1,5 @@
 ---
-import verticalBarChart, { type DataItem } from '../components/vertical-bar-chart.astro';
+import VerticalBarChart, { type DataItem } from '../components/vertical-bar-chart.astro';
 
 const dataSchema: DataItem[] = [
   {
@@ -27,16 +27,18 @@ const dataLength = new Array([...dataSchema, ...schemaOnly].length).fill(null);
 ---
 
 <div class='flex gap-4 sm:gap-8 justify-center'>
-  <verticalBarChart
+  <VerticalBarChart
     title='Data + Schema'
     label='Time (minutes)'
     data={dataSchema}
     maxValue={maxValue}
-    dataLength={dataLength}></verticalBarChart>
-  <verticalBarChart
+    dataLength={dataLength}
+  />
+  <VerticalBarChart
     title='Schema Only'
     label='Time (minutes)'
     data={schemaOnly}
     maxValue={maxValue}
-    dataLength={dataLength}></verticalBarChart>
+    dataLength={dataLength}
+  />
 </div>
