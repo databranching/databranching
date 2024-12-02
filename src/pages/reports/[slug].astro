@@ -3,6 +3,7 @@ import { getCollection } from 'astro:content';
 
 import Main from '../../layouts/main.astro';
 import TableOfContents from '../../components/table-of-contents.astro';
+import SiteFooter from '../../components/site-footer.astro';
 
 export const reports = await getCollection('reports');
 
@@ -30,16 +31,17 @@ const { Content, headings } = await report.render();
 ---
 
 <Main className='prose prose-lg'>
-  <section class='block lg:flex gap-16'>
-    <aside class='hidden lg:block relative order-2'>
-      <div class='fixed'>
+  <div class='block'>
+    <aside class='relative'>
+      <div class='fixed hidden xl:block top-8 bottom-0 right-[max(0px,calc(50%-42rem))] w-96 p-8 overflow-y-auto z-10'>
         <TableOfContents headings={headings} />
       </div>
     </aside>
-    <div class='relative -mt-6 w-full lg:w-9/12'>
+    <div class='relative -mt-6 w-full xl:w-9/12'>
       <a class='text-xs uppercase hover:text-brand-text' href='/'>Back</a>
       <h1 class='text-2xl sm:text-4xl font-heading uppercase font-bold mb-4'>{title}</h1>
       <Content />
+      <SiteFooter />
     </div>
-  </section>
+  </div>
 </Main>
