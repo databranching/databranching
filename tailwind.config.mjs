@@ -51,6 +51,10 @@ export default {
               },
             },
 
+            hr: {
+              borderColor: 'transparent',
+            },
+
             code: {
               color: theme('colors.brand.tertiary'),
               fontWeight: 100,
