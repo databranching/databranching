@@ -3,7 +3,8 @@ import Main from '../layouts/main.astro';
 import Logo from '../components/logo.astro';
 import Github from '../icons/github.astro';
 
-import BranchTypesDiagram from '../sections/branch-types-diagram.svg';
+import BranchTypesDiagramHorizontal from '../sections/branch-types-diagram-horizontal.svg';
+import BranchTypesDiagramvVertical from '../sections/branch-types-diagram-vertical.svg';
 import BranchTypesTable from '../sections/branch-types-table.astro';
 
 import BranchingWorkflowsDiagram from '../sections/branching-workflows-diagram.svg';
@@ -43,8 +44,11 @@ import ResourceIsolationTable from '../sections/resource-isolation-table.astro';
           A database branch is like a Git branch, but it includes two distinct attributes: data and schema. Different
           providers offer different types when creating branches.
         </p>
-        <div class='w-full mx-auto max-w-xl mb-16'>
-          <img src={BranchTypesDiagram.src} alt='branch types diagram' />
+        <div class='hidden lg:block w-full mx-auto max-w-xl mb-16'>
+          <img src={BranchTypesDiagramHorizontal.src} alt='branch types diagram' />
+        </div>
+        <div class='block lg:hidden w-full mx-auto max-w-[14rem] mb-16 lg:mb-0'>
+          <img src={BranchTypesDiagramvVertical.src} alt='branch types diagram' />
         </div>
         <div class='mx-auto max-w-2xl'>
           <BranchTypesTable />
