@@ -4,7 +4,7 @@ import Logo from '../components/logo.astro';
 import Github from '../icons/github.astro';
 
 import BranchTypesDiagramHorizontal from '../sections/branch-types-diagram-horizontal.svg';
-import BranchTypesDiagramvVertical from '../sections/branch-types-diagram-vertical.svg';
+import BranchTypesDiagramVertical from '../sections/branch-types-diagram-vertical.svg';
 import BranchTypesTable from '../sections/branch-types-table.astro';
 
 import BranchingWorkflowsDiagram from '../sections/branching-workflows-diagram.svg';
@@ -18,15 +18,15 @@ import BranchBranchingTable from '../sections/branch-branching-table.astro';
 import ResourceIsolationDiagram from '../sections/resource-isolation-diagram.svg';
 import ResourceIsolationTable from '../sections/resource-isolation-table.astro';
 
-import BranchingCostsDiagramvHorizontal from '../sections/branching-costs-diagram-horizontal.svg';
-import BranchingCostsDiagramvVertical from '../sections/branching-costs-diagram-vertical.svg';
+import BranchingCostsDiagramHorizontal from '../sections/branching-costs-diagram-horizontal.svg';
+import BranchingCostsDiagramVertical from '../sections/branching-costs-diagram-vertical.svg';
 import BranchingCostsTable from '../sections/branching-costs-table.astro';
 ---
 
 <Main className='text-brand-text'>
   <div class='flex flex-col min-h-screen h-full'>
     <Logo className='w-full sm:max-w-96' />
-    <div class='flex flex-col gap-48 pt-8 pb-32'>
+    <div class='flex flex-col gap-16 lg:gap-48 pt-8 pb-32'>
       <section>
         <h1 class='section-h1 text-center sm:text-left'>
           A closer look at database branches: how they work and what to keep in mind when choosing a serverless database
@@ -48,11 +48,11 @@ import BranchingCostsTable from '../sections/branching-costs-table.astro';
           A database branch is like a Git branch, but it includes two distinct attributes: data and schema. Different
           providers offer different types when creating branches.
         </p>
-        <div class='hidden lg:block w-full mx-auto max-w-xl mb-16'>
+        <div class='hidden lg:block w-full mx-auto max-w-xl'>
           <img src={BranchTypesDiagramHorizontal.src} alt='branch types diagram' />
         </div>
-        <div class='block lg:hidden w-full mx-auto max-w-[14rem] mb-16 lg:mb-0'>
-          <img src={BranchTypesDiagramvVertical.src} alt='branch types diagram' />
+        <div class='block lg:hidden w-full mx-auto max-w-[14rem]'>
+          <img src={BranchTypesDiagramVertical.src} alt='branch types diagram' />
         </div>
         <div class='mx-auto max-w-2xl'>
           <BranchTypesTable />
@@ -65,7 +65,7 @@ import BranchingCostsTable from '../sections/branching-costs-table.astro';
         </div>
         <div>
           <h2 class='section-h2 text-center lg:text-left'>Branching Workflows</h2>
-          <p class='section-p text-center lg:text-left'>
+          <p class='section-p text-center lg:text-left !mb-0'>
             A database branch can be linked with a codebase branch so database and application changes are synced. This
             can be helpful in one-to-one relationships, but can be unhelpful in one-to-many.
           </p>
@@ -96,7 +96,7 @@ import BranchingCostsTable from '../sections/branching-costs-table.astro';
         </div>
         <div>
           <h2 class='section-h2 text-center lg:text-left'>Branch Branching</h2>
-          <p class='section-p text-center lg:text-left'>
+          <p class='section-p text-center lg:text-left !mb-0'>
             On occasion you won't want to branch directly from the main branch, but instead, you may want to branch from
             an existing branch. Creating a branch for development, testing or staging for instance.
           </p>
@@ -112,7 +112,7 @@ import BranchingCostsTable from '../sections/branching-costs-table.astro';
         </div>
         <div>
           <h2 class='section-h2 text-center lg:text-left'>Resource Isolation</h2>
-          <p class='section-p text-center lg:text-left'>
+          <p class='section-p text-center lg:text-left !mb-0'>
             Sharing CPU/RAM between branches can lead to noisy neighbor problems. A more performant approach is for each
             branch to have its own dedicated resource.
           </p>
@@ -128,11 +128,11 @@ import BranchingCostsTable from '../sections/branching-costs-table.astro';
           A branch uses the same resources as a new database, sometimes making it subject to billing. Some providers
           restrict branching to paid plans often with unpredictable pricing.
         </p>
-        <div class='hidden lg:block w-full mx-auto max-w-3xl mb-16'>
-          <img src={BranchingCostsDiagramvHorizontal.src} alt='branching costs diagram' />
+        <div class='hidden lg:block w-full mx-auto max-w-3xl'>
+          <img src={BranchingCostsDiagramHorizontal.src} alt='branching costs diagram' />
         </div>
-        <div class='block lg:hidden w-full mx-auto max-w-[14rem] mb-16 lg:mb-0'>
-          <img src={BranchingCostsDiagramvVertical.src} alt='branching costs diagram' />
+        <div class='block lg:hidden w-full mx-auto max-w-[16rem]'>
+          <img src={BranchingCostsDiagramVertical.src} alt='branching costs diagram' />
         </div>
         <div class='mx-auto max-w-2xl'>
           <BranchingCostsTable />
