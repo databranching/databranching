@@ -13,6 +13,9 @@ import BranchCreationSpeed from '../sections/branch-creation-speed.astro';
 
 import BranchBranchingDiagram from '../sections/branch-branching-diagram.svg';
 import BranchBranchingTable from '../sections/branch-branching-table.astro';
+
+import ResourceIsolationDiagram from '../sections/resource-isolation-diagram.svg';
+import ResourceIsolationTable from '../sections/resource-isolation-table.astro';
 ---
 
 <Main className='text-brand-text'>
@@ -40,7 +43,7 @@ import BranchBranchingTable from '../sections/branch-branching-table.astro';
           A database branch is like a Git branch, but it includes two distinct attributes: data and schema. Different
           providers offer different types when creating branches.
         </p>
-        <div class='mx-auto max-w-xl mb-16'>
+        <div class='w-full mx-auto max-w-xl mb-16'>
           <img src={BranchTypesDiagram.src} alt='branch types diagram' />
         </div>
         <div class='mx-auto max-w-2xl'>
@@ -49,7 +52,7 @@ import BranchBranchingTable from '../sections/branch-branching-table.astro';
       </section>
 
       <section class='block lg:flex lg:flex-row items-center gap-16'>
-        <div class='max-w-[280px] lg:min-w-[360px] mx-auto mb-16 lg:mb-0'>
+        <div class='w-full mx-auto max-w-xs mb-16 lg:mb-0'>
           <img src={BranchingWorkflowsDiagram.src} alt='branching workflows diagram' />
         </div>
         <div>
@@ -80,8 +83,8 @@ import BranchBranchingTable from '../sections/branch-branching-table.astro';
       </section>
 
       <section class='block lg:flex lg:flex-row items-center gap-16'>
-        <div class='order-2 max-w-[280px] lg:min-w-[360px] mx-auto mb-16 lg:mb-0'>
-          <img src={BranchBranchingDiagram.src} alt='branching workflows diagram' />
+        <div class='order-2 w-full mx-auto max-w-xs mb-16 lg:mb-0'>
+          <img src={BranchBranchingDiagram.src} alt='branching branching diagram' />
         </div>
         <div>
           <h2 class='section-h2 text-center lg:text-left'>Branch Branching</h2>
@@ -91,6 +94,22 @@ import BranchBranchingTable from '../sections/branch-branching-table.astro';
           </p>
           <div class='mx-auto max-w-2xl'>
             <BranchBranchingTable />
+          </div>
+        </div>
+      </section>
+
+      <section class='block lg:flex lg:flex-row items-center gap-16'>
+        <div class='w-full mx-auto max-w-xs mb-16 lg:mb-0'>
+          <img src={ResourceIsolationDiagram.src} alt='resource isolation diagram' />
+        </div>
+        <div>
+          <h2 class='section-h2 text-center lg:text-left'>Resource Isolation</h2>
+          <p class='section-p text-center lg:text-left'>
+            Sharing CPU/RAM between branches can lead to noisy neighbor problems. A more performant approach is for each
+            branch to have its own dedicated resource.
+          </p>
+          <div class='mx-auto max-w-2xl'>
+            <ResourceIsolationTable />
           </div>
         </div>
       </section>
