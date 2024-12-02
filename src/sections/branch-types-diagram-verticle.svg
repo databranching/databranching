@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 28.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 244.23 304.85" style="enable-background:new 0 0 244.23 304.85;" xml:space="preserve">
+<g>
+	<g>
+		<g>
+			<path style="fill:none;stroke:#D9DBDF;stroke-width:1.4;stroke-linecap:round;stroke-miterlimit:10;" d="M23.95,69.63h-3.9
+				c-2.58,0-4.69-2.11-4.69-4.69V42.66"/>
+			
+				<circle style="fill:none;stroke:#D9DBDF;stroke-width:1.4;stroke-linecap:round;stroke-miterlimit:10;" cx="28.53" cy="69.63" r="4.49"/>
+		</g>
+		<g>
+			<linearGradient id="SVGID_1_" gradientUnits="userSpaceOnUse" x1="107.1128" y1="0.5" x2="107.1128" y2="37.2374">
+				<stop  offset="0" style="stop-color:#232140"/>
+				<stop  offset="1" style="stop-color:#16142C"/>
+			</linearGradient>
+			<path style="fill:url(#SVGID_1_);stroke:#232140;stroke-miterlimit:10;" d="M211.73,37.24H2.5c-1.1,0-2-0.9-2-2V2.5
+				c0-1.1,0.9-2,2-2h209.23c1.1,0,2,0.9,2,2v32.74C213.73,36.34,212.83,37.24,211.73,37.24z"/>
+			<text transform="matrix(1 0 0 1 41.6109 23.8454)" style="fill:#D9DBDF; font-family:'Roboto-Regular'; font-size:16px;">main</text>
+			<path style="fill:none;stroke:#D9DBDF;stroke-miterlimit:10;" d="M30.3,13.24c0,2.28-3.69,4.12-8.25,4.12s-8.25-1.85-8.25-4.12
+				 M30.3,13.24c0-2.28-3.69-4.12-8.25-4.12s-8.25,1.85-8.25,4.12 M30.3,13.24v11.25c0,2.28-3.69,4.12-8.25,4.12
+				s-8.25-1.85-8.25-4.12V13.24 M30.3,13.24v3.75 M13.8,13.24v3.75 M30.3,16.99v3.75c0,2.28-3.69,4.12-8.25,4.12
+				s-8.25-1.85-8.25-4.12v-3.75 M30.3,16.99c0,2.28-3.69,4.12-8.25,4.12s-8.25-1.85-8.25-4.12"/>
+		</g>
+		<g>
+			
+				<linearGradient id="SVGID_00000145779394683848357430000008506339700905555624_" gradientUnits="userSpaceOnUse" x1="142.1128" y1="50.5" x2="142.1128" y2="87.2374">
+				<stop  offset="0" style="stop-color:#232140"/>
+				<stop  offset="1" style="stop-color:#16142C"/>
+			</linearGradient>
+			<path style="fill:url(#SVGID_00000145779394683848357430000008506339700905555624_);stroke:#232140;stroke-miterlimit:10;" d="
+				M241.73,87.24H42.5c-1.1,0-2-0.9-2-2V52.5c0-1.1,0.9-2,2-2h199.23c1.1,0,2,0.9,2,2v32.74C243.73,86.34,242.83,87.24,241.73,87.24
+				z"/>
+			<g>
+				<path style="fill:none;stroke:#58E6D9;stroke-miterlimit:10;" d="M66.67,73.65h-2.43c-1.39,0-2.52-1.14-2.52-2.52V66.2"/>
+				<line style="fill:none;stroke:#58E6D9;stroke-miterlimit:10;" x1="56.93" y1="65.81" x2="66.54" y2="65.81"/>
+				<circle style="fill:none;stroke:#58E6D9;stroke-miterlimit:10;" cx="54.94" cy="65.89" r="2.1"/>
+				<circle style="fill:none;stroke:#58E6D9;stroke-miterlimit:10;" cx="68.82" cy="65.89" r="2.1"/>
+				<circle style="fill:none;stroke:#58E6D9;stroke-miterlimit:10;" cx="68.82" cy="73.85" r="2.1"/>
+			</g>
+			<g>
+				<text transform="matrix(1 0 0 1 81.6108 73.8454)" style="fill:#58E6D9; font-family:'Roboto-Regular'; font-size:16px;">data + schema</text>
+			</g>
+		</g>
+		<g>
+			
+				<linearGradient id="SVGID_00000005247276399350068630000004538904069860165000_" gradientUnits="userSpaceOnUse" x1="142.1128" y1="100.5" x2="142.1128" y2="137.2374">
+				<stop  offset="0" style="stop-color:#232140"/>
+				<stop  offset="1" style="stop-color:#16142C"/>
+			</linearGradient>
+			<path style="fill:url(#SVGID_00000005247276399350068630000004538904069860165000_);stroke:#232140;stroke-miterlimit:10;" d="
+				M241.73,137.24H42.5c-1.1,0-2-0.9-2-2V102.5c0-1.1,0.9-2,2-2h199.23c1.1,0,2,0.9,2,2v32.74
+				C243.73,136.34,242.83,137.24,241.73,137.24z"/>
+			<g>
+				<path style="fill:none;stroke:#57538C;stroke-miterlimit:10;" d="M66.67,123.65h-2.43c-1.39,0-2.52-1.14-2.52-2.52v-4.92"/>
+				<line style="fill:none;stroke:#57538C;stroke-miterlimit:10;" x1="56.93" y1="115.81" x2="66.54" y2="115.81"/>
+				<circle style="fill:none;stroke:#57538C;stroke-miterlimit:10;" cx="54.94" cy="115.89" r="2.1"/>
+				<circle style="fill:none;stroke:#57538C;stroke-miterlimit:10;" cx="68.82" cy="115.89" r="2.1"/>
+				<circle style="fill:none;stroke:#57538C;stroke-miterlimit:10;" cx="68.82" cy="123.85" r="2.1"/>
+			</g>
+			<g>
+				<text transform="matrix(1 0 0 1 81.6108 123.8454)" style="fill:#57538C; font-family:'Roboto-Regular'; font-size:16px;">schema only</text>
+			</g>
+		</g>
+	</g>
+	<g>
+		<g>
+			<path style="fill:none;stroke:#D9DBDF;stroke-width:1.4;stroke-linecap:round;stroke-miterlimit:10;" d="M23.95,284.73h-3.9
+				c-2.58,0-4.69-2.11-4.69-4.69v-70.28"/>
+			
+				<circle style="fill:none;stroke:#D9DBDF;stroke-width:1.4;stroke-linecap:round;stroke-miterlimit:10;" cx="28.53" cy="284.73" r="4.49"/>
+		</g>
+		<g>
+			
+				<linearGradient id="SVGID_00000076599678259629385640000017914677734272407680_" gradientUnits="userSpaceOnUse" x1="107.1128" y1="167.6084" x2="107.1128" y2="204.3458">
+				<stop  offset="0" style="stop-color:#232140"/>
+				<stop  offset="1" style="stop-color:#16142C"/>
+			</linearGradient>
+			<path style="fill:url(#SVGID_00000076599678259629385640000017914677734272407680_);stroke:#232140;stroke-miterlimit:10;" d="
+				M211.73,204.35H2.5c-1.1,0-2-0.9-2-2v-32.74c0-1.1,0.9-2,2-2h209.23c1.1,0,2,0.9,2,2v32.74
+				C213.73,203.45,212.83,204.35,211.73,204.35z"/>
+			<text transform="matrix(1 0 0 1 41.6109 190.9539)" style="fill:#D9DBDF; font-family:'Roboto-Regular'; font-size:16px;">main</text>
+			<path style="fill:none;stroke:#D9DBDF;stroke-miterlimit:10;" d="M30.3,180.35c0,2.28-3.69,4.12-8.25,4.12s-8.25-1.85-8.25-4.12
+				 M30.3,180.35c0-2.28-3.69-4.12-8.25-4.12s-8.25,1.85-8.25,4.12 M30.3,180.35v11.25c0,2.28-3.69,4.12-8.25,4.12
+				s-8.25-1.85-8.25-4.12v-11.25 M30.3,180.35v3.75 M13.8,180.35v3.75 M30.3,184.1v3.75c0,2.28-3.69,4.12-8.25,4.12
+				s-8.25-1.85-8.25-4.12v-3.75 M30.3,184.1c0,2.28-3.69,4.12-8.25,4.12s-8.25-1.85-8.25-4.12"/>
+		</g>
+		<g>
+			
+				<linearGradient id="SVGID_00000136386564395893906170000004030946785058898076_" gradientUnits="userSpaceOnUse" x1="142.1128" y1="217.6084" x2="142.1128" y2="254.3458">
+				<stop  offset="0" style="stop-color:#232140"/>
+				<stop  offset="1" style="stop-color:#16142C"/>
+			</linearGradient>
+			<path style="fill:url(#SVGID_00000136386564395893906170000004030946785058898076_);stroke:#232140;stroke-miterlimit:10;" d="
+				M241.73,254.35H42.5c-1.1,0-2-0.9-2-2v-32.74c0-1.1,0.9-2,2-2h199.23c1.1,0,2,0.9,2,2v32.74
+				C243.73,253.45,242.83,254.35,241.73,254.35z"/>
+			<g>
+				<path style="fill:none;stroke:#57538C;stroke-miterlimit:10;" d="M66.67,240.75h-2.43c-1.39,0-2.52-1.14-2.52-2.52v-4.92"/>
+				<line style="fill:none;stroke:#57538C;stroke-miterlimit:10;" x1="56.93" y1="232.92" x2="66.54" y2="232.92"/>
+				<circle style="fill:none;stroke:#57538C;stroke-miterlimit:10;" cx="54.94" cy="233" r="2.1"/>
+				<circle style="fill:none;stroke:#57538C;stroke-miterlimit:10;" cx="68.82" cy="233" r="2.1"/>
+				<circle style="fill:none;stroke:#57538C;stroke-miterlimit:10;" cx="68.82" cy="240.95" r="2.1"/>
+			</g>
+			<g>
+				<text transform="matrix(1 0 0 1 81.6108 240.9539)" style="fill:#57538C; font-family:'Roboto-Regular'; font-size:16px;">data + schema</text>
+			</g>
+		</g>
+		<g>
+			
+				<linearGradient id="SVGID_00000120541718088159891880000017537754934519444150_" gradientUnits="userSpaceOnUse" x1="142.1128" y1="267.6084" x2="142.1128" y2="304.3458">
+				<stop  offset="0" style="stop-color:#232140"/>
+				<stop  offset="1" style="stop-color:#16142C"/>
+			</linearGradient>
+			<path style="fill:url(#SVGID_00000120541718088159891880000017537754934519444150_);stroke:#232140;stroke-miterlimit:10;" d="
+				M241.73,304.35H42.5c-1.1,0-2-0.9-2-2v-32.74c0-1.1,0.9-2,2-2h199.23c1.1,0,2,0.9,2,2v32.74
+				C243.73,303.45,242.83,304.35,241.73,304.35z"/>
+			<g>
+				<path style="fill:none;stroke:#58E6D9;stroke-miterlimit:10;" d="M66.67,290.75h-2.43c-1.39,0-2.52-1.14-2.52-2.52v-4.92"/>
+				<line style="fill:none;stroke:#58E6D9;stroke-miterlimit:10;" x1="56.93" y1="282.92" x2="66.54" y2="282.92"/>
+				<circle style="fill:none;stroke:#58E6D9;stroke-miterlimit:10;" cx="54.94" cy="283" r="2.1"/>
+				<circle style="fill:none;stroke:#58E6D9;stroke-miterlimit:10;" cx="68.82" cy="283" r="2.1"/>
+				<circle style="fill:none;stroke:#58E6D9;stroke-miterlimit:10;" cx="68.82" cy="290.95" r="2.1"/>
+			</g>
+			<g>
+				<text transform="matrix(1 0 0 1 81.6108 290.9539)" style="fill:#58E6D9; font-family:'Roboto-Regular'; font-size:16px;">schema only</text>
+			</g>
+		</g>
+	</g>
+</g>
+</svg>
