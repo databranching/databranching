@@ -23,14 +23,22 @@ export async function getStaticPaths() {
 const {
   report,
   report: {
-    data: { title },
+    slug,
+    collection,
+    data: { title, description },
   },
 } = Astro.props;
 
 const { Content, headings } = await report.render();
 ---
 
-<Main className='prose prose-lg'>
+<Main
+  className='prose prose-lg'
+  title={title}
+  slug={`/${collection}/${slug}`}
+  description={description}
+  image='/images/databranching-report-branching.jpg'
+>
   <div class='block'>
     <aside class='relative'>
       <div class='fixed hidden xl:block top-8 bottom-0 right-[max(0px,calc(50%-42rem))] w-96 p-8 overflow-y-auto z-10'>

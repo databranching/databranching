@@ -9,13 +9,57 @@ import '@fontsource/orbitron/900.css';
 import '../styles/global.css';
 
 interface Props {
+  title: string;
+  description: string;
+  slug?: string;
+  image?: string;
+  canonical?: string;
   className?: string;
 }
+
+const { title, description, slug, image, canonical } = Astro.props;
+
+const name = 'Data Branching';
+const siteUrl = 'https://databranching.co';
+const defaultImage = '/images/databranching-open-graph.jpg';
+
+const htmlTitle = `${name} | ${title}`;
+const canonicalHref = canonical ? canonical : `${siteUrl}${slug}`;
+
+const ogImage = image ? image : `${siteUrl}${defaultImage}`;
 ---
 
 <html lang='en'>
   <head>
     <meta charset='utf-8' />
+
+    <title>{htmlTitle}</title>
+    <link rel='canonical' href={canonicalHref} />
+
+    <meta name='viewport' content='width=device-width, initial-scale=1' />
+    <meta name='description' content={description} />
+    <meta name='image' content={ogImage} />
+    <meta name='image:alt' content={description} />
+
+    <!-- Facebook -->
+    <meta property='og:title' content={htmlTitle} />
+    <meta property='og:url' content={`${siteUrl}${slug}`} />
+    <meta property='og:description' content={description} />
+    <meta property='og:image' content={ogImage} />
+    <meta property='og:image:alt' content={description} />
+
+    <!-- Twitter -->
+    <meta name='twitter:card' content='summary_large_image' />
+    <meta name='twitter:title' content={htmlTitle} />
+    <meta name='twitter:url' content={`${siteUrl}${slug}`} />
+    <meta name='twitter:description' content={description} />
+    <meta name='twitter:image' content={ogImage} />
+    <meta name='twitter:image:alt' content={description} />
+
+    <!-- Favicons -->
+    <link rel='icon' type='image/x-icon' href='/favicon.ico' />
+    <link rel='icon' type='image/png' sizes='16x16' href='/favicon-16x16.png' data-react-helmet='true' />
+    <link rel='icon' type='image/png' sizes='32x32' href='/favicon-32x32.png' data-react-helmet='true' />
   </head>
   <body class='bg-brand-background min-w-[320px]'>
     <main class={`p-8 sm:px-16 sm:py-20 mx-auto max-w-6xl ${className}`}>
