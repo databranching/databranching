@@ -38,7 +38,7 @@
 		<circle style="fill:none;stroke:#58E6D9;stroke-miterlimit:10;" cx="116.87" cy="213.13" r="2.1"/>
 	</g>
 	<g>
-		<text transform="matrix(1 0 0 1 129.6694 213.126)" style="fill:#58E6D9; font-family:'IBMPlexSans-Regular'; font-size:16px;">feat/add-user-age</text>
+		<text transform="matrix(1 0 0 1 129.6694 213.126)" style="fill:#58E6D9; font-family:'system-ui'; font-size:16px;">feat/add-user-age</text>
 	</g>
 	<g>
 		
