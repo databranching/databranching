@@ -16,7 +16,7 @@
 		</linearGradient>
 		<path style="fill:url(#SVGID_1_);stroke:#232140;stroke-miterlimit:10;" d="M259.78,176.4H50.56c-1.1,0-2-0.9-2-2v-32.74
 			c0-1.1,0.9-2,2-2h209.23c1.1,0,2,0.9,2,2v32.74C261.78,175.5,260.89,176.4,259.78,176.4z"/>
-		<text transform="matrix(1 0 0 1 89.6695 163.0049)" style="fill:#D9DBDF; font-family:'Roboto-Regular'; font-size:16px;">main</text>
+		<text transform="matrix(1 0 0 1 89.6695 163.0049)" style="fill:#D9DBDF; font-family:'system-ui'; font-size:16px;">main</text>
 		<path style="fill:none;stroke:#D9DBDF;stroke-miterlimit:10;" d="M78.36,152.4c0,2.28-3.69,4.12-8.25,4.12s-8.25-1.85-8.25-4.12
 			 M78.36,152.4c0-2.28-3.69-4.12-8.25-4.12s-8.25,1.85-8.25,4.12 M78.36,152.4v11.25c0,2.28-3.69,4.12-8.25,4.12
 			s-8.25-1.85-8.25-4.12V152.4 M78.36,152.4v3.75 M61.86,152.4v3.75 M78.36,156.15v3.75c0,2.28-3.69,4.12-8.25,4.12
@@ -49,18 +49,18 @@
 		<path style="fill:url(#SVGID_00000153695890266510206800000015600770916488415128_);stroke:#232140;stroke-miterlimit:10;" d="
 			M137.73,117.24H81.57l-11.58,12l-11.6-12H2.5c-1.1,0-2-0.9-2-2V2.5c0-1.1,0.9-2,2-2h135.23c1.1,0,2,0.9,2,2v112.74
 			C139.73,116.34,138.83,117.24,137.73,117.24z"/>
-		<text transform="matrix(1 0 0 1 32.2946 22.6739)" style="fill:#D9DBDF; font-family:'Roboto-Medium'; font-size:12px;">Resource</text>
+		<text transform="matrix(1 0 0 1 32.2946 22.6739)" style="fill:#D9DBDF; font-family:'system-ui'; font-size:12px;">Resource</text>
 		<path style="fill:none;stroke:#D9DBDF;stroke-width:0.9143;stroke-miterlimit:10;" d="M15.72,10.17v1.33 M12.39,14.84h-1.33
 			 M27.06,14.84h-1.33 M12.39,18.17h-1.33 M27.06,18.17h-1.33 M12.39,21.51h-1.33 M27.06,21.51h-1.33 M15.72,24.84v1.33
 			 M19.06,10.17v1.33 M19.06,24.84v1.33 M22.39,10.17v1.33 M22.39,24.84v1.33 M14.39,24.84h9.33c1.1,0,2-0.9,2-2v-9.33
 			c0-1.1-0.9-2-2-2h-9.33c-1.1,0-2,0.9-2,2v9.33C12.39,23.95,13.28,24.84,14.39,24.84z M15.06,14.17h8v8h-8V14.17z"/>
 		<g>
-			<text transform="matrix(1 0 0 1 12.6388 50.837)" style="fill:#D9DBDF; font-family:'Roboto-Medium'; font-size:12px;">Min:</text>
-			<text transform="matrix(1 0 0 1 12.6391 66.6487)" style="fill:#D9DBDF; font-family:'Roboto-Light'; font-size:12px;">0.25 vCPU, 1 GB RAM</text>
+			<text transform="matrix(1 0 0 1 12.6388 50.837)" style="fill:#D9DBDF; font-family:'system-ui'; font-size:10px;">Min:</text>
+			<text transform="matrix(1 0 0 1 12.6391 66.6487)" style="fill:#D9DBDF; font-family:'system-ui'; font-size:10px;">0.25 vCPU, 1 GB RAM</text>
 		</g>
 		<g>
-			<text transform="matrix(1 0 0 1 12.6388 84.837)" style="fill:#D9DBDF; font-family:'Roboto-Medium'; font-size:12px;">Max:</text>
-			<text transform="matrix(1 0 0 1 12.6391 100.6487)" style="fill:#D9DBDF; font-family:'Roboto-Light'; font-size:12px;">10 vCPU, 40 GB RAM</text>
+			<text transform="matrix(1 0 0 1 12.6388 84.837)" style="fill:#D9DBDF; font-family:'system-ui'; font-size:10px;">Max:</text>
+			<text transform="matrix(1 0 0 1 12.6391 100.6487)" style="fill:#D9DBDF; font-family:'system-ui'; font-size:10px;">10 vCPU, 40 GB RAM</text>
 		</g>
 	</g>
 	<g>
@@ -72,18 +72,18 @@
 		<path style="fill:url(#SVGID_00000160155193208673942640000008573659500807998596_);stroke:#232140;stroke-miterlimit:10;" d="
 			M179.86,248.86h-56.16l-11.58-12l-11.6,12H44.64c-1.1,0-2,0.9-2,2V363.6c0,1.1,0.9,2,2,2h135.23c1.1,0,2-0.9,2-2V250.86
 			C181.86,249.76,180.97,248.86,179.86,248.86z"/>
-		<text transform="matrix(1 0 0 1 74.4328 274.0362)" style="fill:#D9DBDF; font-family:'Roboto-Medium'; font-size:12px;">Resource</text>
+		<text transform="matrix(1 0 0 1 74.4328 274.0362)" style="fill:#D9DBDF; font-family:'system-ui'; font-size:12px;">Resource</text>
 		<path style="fill:none;stroke:#58E6D9;stroke-width:0.9143;stroke-miterlimit:10;" d="M57.86,261.54v1.33 M54.53,266.2h-1.33
 			 M69.19,266.2h-1.33 M54.53,269.54h-1.33 M69.19,269.54h-1.33 M54.53,272.87h-1.33 M69.19,272.87h-1.33 M57.86,276.2v1.33
 			 M61.19,261.54v1.33 M61.19,276.2v1.33 M64.53,261.54v1.33 M64.53,276.2v1.33 M56.53,276.2h9.33c1.1,0,2-0.9,2-2v-9.33
 			c0-1.1-0.9-2-2-2h-9.33c-1.1,0-2,0.9-2,2v9.33C54.53,275.31,55.42,276.2,56.53,276.2z M57.19,265.54h8v8h-8V265.54z"/>
 		<g>
-			<text transform="matrix(1 0 0 1 54.777 302.1992)" style="fill:#D9DBDF; font-family:'Roboto-Medium'; font-size:12px;">Min:</text>
-			<text transform="matrix(1 0 0 1 54.7773 318.011)" style="fill:#D9DBDF; font-family:'Roboto-Light'; font-size:12px;">0.25 vCPU, 1 GB RAM</text>
+			<text transform="matrix(1 0 0 1 54.777 302.1992)" style="fill:#D9DBDF; font-family:'system-ui'; font-size:10px;">Min:</text>
+			<text transform="matrix(1 0 0 1 54.7773 318.011)" style="fill:#D9DBDF; font-family:'system-ui'; font-size:10px;">0.25 vCPU, 1 GB RAM</text>
 		</g>
 		<g>
-			<text transform="matrix(1 0 0 1 54.777 336.1992)" style="fill:#D9DBDF; font-family:'Roboto-Medium'; font-size:12px;">Max:</text>
-			<text transform="matrix(1 0 0 1 54.7773 352.011)" style="fill:#D9DBDF; font-family:'Roboto-Light'; font-size:12px;">10 vCPU, 40 GB RAM</text>
+			<text transform="matrix(1 0 0 1 54.777 336.1992)" style="fill:#D9DBDF; font-family:'system-ui'; font-size:10px;">Max:</text>
+			<text transform="matrix(1 0 0 1 54.7773 352.011)" style="fill:#D9DBDF; font-family:'system-ui'; font-size:10px;">10 vCPU, 40 GB RAM</text>
 		</g>
 	</g>
 </g>
