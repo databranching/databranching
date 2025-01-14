@@ -39,7 +39,7 @@
 			<circle style="fill:none;stroke:#58E6D9;stroke-miterlimit:10;" cx="74.74" cy="73.85" r="2.1"/>
 		</g>
 		<g>
-			<text transform="matrix(1 0 0 1 87.5312 73.8453)" style="fill:#58E6D9; font-family:'IBMPlexSans-Regular'; font-size:16px;">feat/add-user-age</text>
+			<text transform="matrix(1 0 0 1 87.5312 73.8453)" style="fill:#58E6D9; font-family:'system-ui'; font-size:16px;">feat/add-user-age</text>
 		</g>
 	</g>
 	<g>
@@ -101,7 +101,7 @@
 			<circle style="fill:none;stroke:#58E6D9;stroke-miterlimit:10;" cx="74.74" cy="296.17" r="2.1"/>
 		</g>
 		<g>
-			<text transform="matrix(1 0 0 1 87.5312 296.1705)" style="fill:#58E6D9; font-family:'IBMPlexSans-Regular'; font-size:16px;">feat/add-user-age</text>
+			<text transform="matrix(1 0 0 1 87.5312 296.1705)" style="fill:#58E6D9; font-family:'system-ui'; font-size:16px;">feat/add-user-age</text>
 		</g>
 	</g>
 	<g>
@@ -163,7 +163,7 @@
 			<circle style="fill:none;stroke:#58E6D9;stroke-miterlimit:10;" cx="74.74" cy="516.59" r="2.1"/>
 		</g>
 		<g>
-			<text transform="matrix(1 0 0 1 87.5311 516.5934)" style="fill:#58E6D9; font-family:'IBMPlexSans-Regular'; font-size:16px;">feat/add-user-age</text>
+			<text transform="matrix(1 0 0 1 87.5311 516.5934)" style="fill:#58E6D9; font-family:'system-ui'; font-size:16px;">feat/add-user-age</text>
 		</g>
 	</g>
 	<g>

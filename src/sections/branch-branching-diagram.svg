@@ -25,7 +25,7 @@
 		</linearGradient>
 		<path style="fill:url(#SVGID_1_);stroke:#232140;stroke-miterlimit:10;" d="M211.73,37.24H2.5c-1.1,0-2-0.9-2-2V2.5
 			c0-1.1,0.9-2,2-2h209.23c1.1,0,2,0.9,2,2v32.74C213.73,36.34,212.83,37.24,211.73,37.24z"/>
-		<text transform="matrix(1 0 0 1 41.6109 23.8456)" style="fill:#C9CBCF; font-family:'IBMPlexSans-Regular'; font-size:16px;">main</text>
+		<text transform="matrix(1 0 0 1 41.6109 23.8456)" style="fill:#C9CBCF; font-family:'system-ui'; font-size:16px;">main</text>
 		<path style="fill:none;stroke:#C9CBCF;stroke-miterlimit:10;" d="M30.3,13.24c0,2.28-3.69,4.12-8.25,4.12s-8.25-1.85-8.25-4.12
 			 M30.3,13.24c0-2.28-3.69-4.12-8.25-4.12s-8.25,1.85-8.25,4.12 M30.3,13.24v11.25c0,2.28-3.69,4.12-8.25,4.12
 			s-8.25-1.85-8.25-4.12V13.24 M30.3,13.24v3.75 M13.8,13.24v3.75 M30.3,16.99v3.75c0,2.28-3.69,4.12-8.25,4.12
@@ -48,7 +48,7 @@
 			<circle style="fill:none;stroke:#58E6D9;stroke-miterlimit:10;" cx="68.82" cy="73.85" r="2.1"/>
 		</g>
 		<g>
-			<text transform="matrix(1 0 0 1 81.6108 73.8453)" style="fill:#58E6D9; font-family:'IBMPlexSans-Regular'; font-size:16px;">development</text>
+			<text transform="matrix(1 0 0 1 81.6108 73.8453)" style="fill:#58E6D9; font-family:'system-ui'; font-size:16px;">development</text>
 		</g>
 	</g>
 	<g>
@@ -68,7 +68,7 @@
 			<circle style="fill:none;stroke:#58E6D9;stroke-miterlimit:10;" cx="68.82" cy="235.85" r="2.1"/>
 		</g>
 		<g>
-			<text transform="matrix(1 0 0 1 81.6108 235.8454)" style="fill:#58E6D9; font-family:'IBMPlexSans-Regular'; font-size:16px;">test</text>
+			<text transform="matrix(1 0 0 1 81.6108 235.8454)" style="fill:#58E6D9; font-family:'system-ui'; font-size:16px;">test</text>
 		</g>
 	</g>
 	<g>
@@ -93,7 +93,7 @@
 			<circle style="fill:none;stroke:#58E6D9;stroke-miterlimit:10;" cx="68.82" cy="355.85" r="2.1"/>
 		</g>
 		<g>
-			<text transform="matrix(1 0 0 1 81.6108 355.8453)" style="fill:#58E6D9; font-family:'IBMPlexSans-Regular'; font-size:16px;">staging</text>
+			<text transform="matrix(1 0 0 1 81.6108 355.8453)" style="fill:#58E6D9; font-family:'system-ui'; font-size:16px;">staging</text>
 		</g>
 	</g>
 	<g>
@@ -113,7 +113,7 @@
 			<circle style="fill:none;stroke:#21A7F9;stroke-miterlimit:10;" cx="109.13" cy="126.36" r="2.1"/>
 		</g>
 		<g>
-			<text transform="matrix(1 0 0 1 121.9236 126.3568)" style="fill:#21A7F9; font-family:'IBMPlexSans-Regular'; font-size:16px;">feat/add-user-age</text>
+			<text transform="matrix(1 0 0 1 121.9236 126.3568)" style="fill:#21A7F9; font-family:'system-ui'; font-size:16px;">feat/add-user-age</text>
 		</g>
 	</g>
 	<g>
@@ -138,7 +138,7 @@
 			<circle style="fill:none;stroke:#21A7F9;stroke-miterlimit:10;" cx="109.13" cy="288.36" r="2.1"/>
 		</g>
 		<g>
-			<text transform="matrix(1 0 0 1 121.9236 288.3568)" style="fill:#21A7F9; font-family:'IBMPlexSans-Regular'; font-size:16px;">test/change-indexes</text>
+			<text transform="matrix(1 0 0 1 121.9236 288.3568)" style="fill:#21A7F9; font-family:'system-ui'; font-size:16px;">test/change-indexes</text>
 		</g>
 	</g>
 	<g>
@@ -163,7 +163,7 @@
 			<circle style="fill:none;stroke:#A4A0FB;stroke-miterlimit:10;" cx="146.13" cy="177.36" r="2.1"/>
 		</g>
 		<g>
-			<text transform="matrix(1 0 0 1 158.9236 177.3568)" style="fill:#A4A0FB; font-family:'IBMPlexSans-Regular'; font-size:16px;">feat/test-user-age</text>
+			<text transform="matrix(1 0 0 1 158.9236 177.3568)" style="fill:#A4A0FB; font-family:'system-ui'; font-size:16px;">feat/test-user-age</text>
 		</g>
 	</g>
 </g>

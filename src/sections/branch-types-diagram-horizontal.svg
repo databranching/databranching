@@ -17,7 +17,7 @@
 			</linearGradient>
 			<path style="fill:url(#SVGID_1_);stroke:#232140;stroke-miterlimit:10;" d="M211.73,37.24H2.5c-1.1,0-2-0.9-2-2V2.5
 				c0-1.1,0.9-2,2-2h209.23c1.1,0,2,0.9,2,2v32.74C213.73,36.34,212.83,37.24,211.73,37.24z"/>
-			<text transform="matrix(1 0 0 1 41.6109 23.8454)" style="fill:#D9DBDF; font-family:'Roboto-Regular'; font-size:16px;">main</text>
+			<text transform="matrix(1 0 0 1 41.6109 23.8454)" style="fill:#D9DBDF; font-family:'system-ui'; font-size:16px;">main</text>
 			<path style="fill:none;stroke:#D9DBDF;stroke-miterlimit:10;" d="M30.3,13.24c0,2.28-3.69,4.12-8.25,4.12s-8.25-1.85-8.25-4.12
 				 M30.3,13.24c0-2.28-3.69-4.12-8.25-4.12s-8.25,1.85-8.25,4.12 M30.3,13.24v11.25c0,2.28-3.69,4.12-8.25,4.12
 				s-8.25-1.85-8.25-4.12V13.24 M30.3,13.24v3.75 M13.8,13.24v3.75 M30.3,16.99v3.75c0,2.28-3.69,4.12-8.25,4.12
@@ -40,7 +40,7 @@
 				<circle style="fill:none;stroke:#58E6D9;stroke-miterlimit:10;" cx="68.82" cy="73.85" r="2.1"/>
 			</g>
 			<g>
-				<text transform="matrix(1 0 0 1 81.6108 73.8454)" style="fill:#58E6D9; font-family:'Roboto-Regular'; font-size:16px;">data + schema</text>
+				<text transform="matrix(1 0 0 1 81.6108 73.8454)" style="fill:#58E6D9; font-family:'system-ui'; font-size:16px;">data + schema</text>
 			</g>
 		</g>
 		<g>
@@ -60,7 +60,7 @@
 				<circle style="fill:none;stroke:#57538C;stroke-miterlimit:10;" cx="68.82" cy="123.85" r="2.1"/>
 			</g>
 			<g>
-				<text transform="matrix(1 0 0 1 81.6108 123.8454)" style="fill:#57538C; font-family:'Roboto-Regular'; font-size:16px;">schema only</text>
+				<text transform="matrix(1 0 0 1 81.6108 123.8454)" style="fill:#57538C; font-family:'system-ui'; font-size:16px;">schema only</text>
 			</g>
 		</g>
 	</g>
@@ -80,7 +80,7 @@
 			<path style="fill:url(#SVGID_00000121973639690630423180000001174065345491568256_);stroke:#232140;stroke-miterlimit:10;" d="
 				M494.9,37.24H285.68c-1.1,0-2-0.9-2-2V2.5c0-1.1,0.9-2,2-2H494.9c1.1,0,2,0.9,2,2v32.74C496.9,36.34,496.01,37.24,494.9,37.24z"
 				/>
-			<text transform="matrix(1 0 0 1 324.789 23.8454)" style="fill:#D9DBDF; font-family:'Roboto-Regular'; font-size:16px;">main</text>
+			<text transform="matrix(1 0 0 1 324.789 23.8454)" style="fill:#D9DBDF; font-family:'system-ui'; font-size:16px;">main</text>
 			<path style="fill:none;stroke:#D9DBDF;stroke-miterlimit:10;" d="M313.48,13.24c0,2.28-3.69,4.12-8.25,4.12s-8.25-1.85-8.25-4.12
 				 M313.48,13.24c0-2.28-3.69-4.12-8.25-4.12s-8.25,1.85-8.25,4.12 M313.48,13.24v11.25c0,2.28-3.69,4.12-8.25,4.12
 				s-8.25-1.85-8.25-4.12V13.24 M313.48,13.24v3.75 M296.98,13.24v3.75 M313.48,16.99v3.75c0,2.28-3.69,4.12-8.25,4.12
@@ -103,7 +103,7 @@
 				<circle style="fill:none;stroke:#57538C;stroke-miterlimit:10;" cx="351.99" cy="73.85" r="2.1"/>
 			</g>
 			<g>
-				<text transform="matrix(1 0 0 1 364.7888 73.8454)" style="fill:#57538C; font-family:'Roboto-Regular'; font-size:16px;">data + schema</text>
+				<text transform="matrix(1 0 0 1 364.7888 73.8454)" style="fill:#57538C; font-family:'system-ui'; font-size:16px;">data + schema</text>
 			</g>
 		</g>
 		<g>
@@ -123,7 +123,7 @@
 				<circle style="fill:none;stroke:#58E6D9;stroke-miterlimit:10;" cx="351.99" cy="123.85" r="2.1"/>
 			</g>
 			<g>
-				<text transform="matrix(1 0 0 1 364.7888 123.8454)" style="fill:#58E6D9; font-family:'Roboto-Regular'; font-size:16px;">schema only</text>
+				<text transform="matrix(1 0 0 1 364.7888 123.8454)" style="fill:#58E6D9; font-family:'system-ui'; font-size:16px;">schema only</text>
 			</g>
 		</g>
 	</g>
