@@ -6,6 +6,7 @@ import rehypeSlug from 'rehype-slug';
 import rehypeAutolinkHeadings from 'rehype-autolink-headings';
 
 export default defineConfig({
+  site: 'https://databranching.co',
   integrations: [
     mdx({
       rehypePlugins: [
