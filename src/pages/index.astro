@@ -24,20 +24,28 @@ import BranchingCostsTable from '../sections/branching-costs-table.astro';
 import SiteFooter from '../components/site-footer.astro';
 ---
 
-<Main className='text-brand-text' title='Home' slug='/' description='A closer look at database branches'>
+<Main
+  className='text-brand-text'
+  title='Home'
+  slug='/'
+  description='A closer look at database branches'
+>
   <div class='flex flex-col min-h-screen h-full'>
-    <Logo className='w-full sm:max-w-96' />
+    <Logo className='max-w-64 md:max-w-96 mx-auto lg:mx-0' />
     <div class='flex flex-col gap-16 lg:gap-48 pt-8 pb-32'>
       <section>
-        <h1 class='section-h1 text-center sm:text-left'>
-          A closer look at database branches: how they work and what to keep in mind when choosing a serverless database
-          provider.
+        <h1 class='section-h1 text-center lg:text-left'>
+          A closer look at database branches: how they work and what to keep in
+          mind when choosing a serverless database provider.
         </h1>
-        <p class='text-lg mb-8 text-center sm:text-left'>
-          A more detailed look at database branching and provider offerings can be found in the report.
+        <p class='text-lg mb-8 text-center lg:text-left'>
+          A more detailed look at database branching and provider offerings can
+          be found in the report.
         </p>
-        <div class='flex justify-center sm:justify-start'>
-          <a href='/reports/branching' class='px-6 py-3 bg-brand-salmon no-underline rounded-sm !text-brand-text'
+        <div class='flex justify-center lg:justify-start'>
+          <a
+            href='/reports/branching'
+            class='px-6 py-3 bg-brand-salmon no-underline rounded-sm !text-brand-text'
             >Read Report</a
           >
         </div>
@@ -46,14 +54,21 @@ import SiteFooter from '../components/site-footer.astro';
       <section>
         <h2 class='section-h2 text-center'>Branch Types</h2>
         <p class='section-p text-center mx-auto'>
-          A database branch is like a Git branch, but it includes two distinct attributes: data and schema. Different
-          providers offer different types when creating branches.
+          A database branch is like a Git branch, but it includes two distinct
+          attributes: data and schema. Different providers offer different types
+          when creating branches.
         </p>
         <div class='hidden lg:block w-full mx-auto max-w-xl'>
-          <img src={BranchTypesDiagramHorizontal.src} alt='branch types diagram' />
+          <img
+            src={BranchTypesDiagramHorizontal.src}
+            alt='branch types diagram'
+          />
         </div>
         <div class='block lg:hidden w-full mx-auto max-w-[14rem]'>
-          <img src={BranchTypesDiagramVertical.src} alt='branch types diagram' />
+          <img
+            src={BranchTypesDiagramVertical.src}
+            alt='branch types diagram'
+          />
         </div>
         <div class='mx-auto max-w-2xl'>
           <BranchTypesTable />
@@ -62,13 +77,19 @@ import SiteFooter from '../components/site-footer.astro';
 
       <section class='block lg:flex lg:flex-row items-center gap-16'>
         <div class='w-full mx-auto max-w-xs mb-16 lg:mb-0'>
-          <img src={BranchingWorkflowsDiagram.src} alt='branching workflows diagram' />
+          <img
+            src={BranchingWorkflowsDiagram.src}
+            alt='branching workflows diagram'
+          />
         </div>
         <div>
-          <h2 class='section-h2 text-center lg:text-left'>Branching Workflows</h2>
+          <h2 class='section-h2 text-center lg:text-left'>
+            Branching Workflows
+          </h2>
           <p class='section-p text-center lg:text-left !mb-0'>
-            A database branch can be linked with a codebase branch so database and application changes are synced. This
-            can be helpful in one-to-one relationships, but can be unhelpful in one-to-many.
+            A database branch can be linked with a codebase branch so database
+            and application changes are synced. This can be helpful in
+            one-to-one relationships, but can be unhelpful in one-to-many.
           </p>
           <div class='mx-auto max-w-2xl'>
             <BranchingWorkflowsTable />
@@ -79,27 +100,34 @@ import SiteFooter from '../components/site-footer.astro';
       <section>
         <h2 class='section-h2 text-center'>Branch Creation Speed</h2>
         <p class='section-p text-center mx-auto'>
-          Creating a codebase branch is usually instant but, creating a database branch, of any type, can take longer
-          than expected, which could impact developer productivity.
+          Creating a codebase branch is usually instant but, creating a database
+          branch, of any type, can take longer than expected, which could impact
+          developer productivity.
         </p>
         <div class='mx-auto max-w-xl mb-16'>
           <BranchCreationSpeed />
-          <small class='block mt-4 text-brand-secondary text-center italic font-light'
-            >*PlanetScale can create Data + Schema branches but the time it takes is determined by the size of the
-            database, unilke Neon which is instant.</small
+          <small
+            class='block mt-4 text-brand-secondary text-center italic font-light'
+            >*PlanetScale can create Data + Schema branches but the time it
+            takes is determined by the size of the database, unilke Neon which
+            is instant.</small
           >
         </div>
       </section>
 
       <section class='block lg:flex lg:flex-row items-center gap-16'>
         <div class='order-2 w-full mx-auto max-w-xs mb-16 lg:mb-0'>
-          <img src={BranchBranchingDiagram.src} alt='branching branching diagram' />
+          <img
+            src={BranchBranchingDiagram.src}
+            alt='branching branching diagram'
+          />
         </div>
         <div>
           <h2 class='section-h2 text-center lg:text-left'>Branch Branching</h2>
           <p class='section-p text-center lg:text-left !mb-0'>
-            On occasion you won't want to branch directly from the main branch, but instead, you may want to branch from
-            an existing branch. Creating a branch for development, testing or staging for instance.
+            On occasion you won't want to branch directly from the main branch,
+            but instead, you may want to branch from an existing branch.
+            Creating a branch for development, testing or staging for instance.
           </p>
           <div class='mx-auto max-w-2xl'>
             <BranchBranchingTable />
@@ -109,13 +137,19 @@ import SiteFooter from '../components/site-footer.astro';
 
       <section class='block lg:flex lg:flex-row items-center gap-16'>
         <div class='w-full mx-auto max-w-xs mb-16 lg:mb-0'>
-          <img src={ResourceIsolationDiagram.src} alt='resource isolation diagram' />
+          <img
+            src={ResourceIsolationDiagram.src}
+            alt='resource isolation diagram'
+          />
         </div>
         <div>
-          <h2 class='section-h2 text-center lg:text-left'>Resource Isolation</h2>
+          <h2 class='section-h2 text-center lg:text-left'>
+            Resource Isolation
+          </h2>
           <p class='section-p text-center lg:text-left !mb-0'>
-            Sharing CPU/RAM between branches can lead to noisy neighbor problems. A more performant approach is for each
-            branch to have its own dedicated resource.
+            Sharing CPU/RAM between branches can lead to noisy neighbor
+            problems. A more performant approach is for each branch to have its
+            own dedicated resource.
           </p>
           <div class='mx-auto max-w-2xl'>
             <ResourceIsolationTable />
@@ -126,14 +160,21 @@ import SiteFooter from '../components/site-footer.astro';
       <section>
         <h2 class='section-h2 text-center'>Branching Costs</h2>
         <p class='section-p text-center mx-auto'>
-          A branch uses the same resources as a new database, sometimes making it subject to billing. Some providers
-          restrict branching to paid plans often with unpredictable pricing.
+          A branch uses the same resources as a new database, sometimes making
+          it subject to billing. Some providers restrict branching to paid plans
+          often with unpredictable pricing.
         </p>
         <div class='hidden lg:block w-full mx-auto max-w-3xl'>
-          <img src={BranchingCostsDiagramHorizontal.src} alt='branching costs diagram' />
+          <img
+            src={BranchingCostsDiagramHorizontal.src}
+            alt='branching costs diagram'
+          />
         </div>
         <div class='block lg:hidden w-full mx-auto max-w-[16rem]'>
-          <img src={BranchingCostsDiagramVertical.src} alt='branching costs diagram' />
+          <img
+            src={BranchingCostsDiagramVertical.src}
+            alt='branching costs diagram'
+          />
         </div>
         <div class='mx-auto max-w-2xl'>
           <BranchingCostsTable />
