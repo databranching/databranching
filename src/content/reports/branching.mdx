@@ -21,13 +21,16 @@ import BranchingCostsTable from '../../sections/branching-costs-table.astro';
   provider.
 </sub>
 
-If you're coming from the Git versioning world of programming, you’ll be familiar with the concept of a branch and regardless of your Git provider, GitHub, GitLab, BitBucket etc, code branching always works in the same way. You branch off from e.g main, which creates an exact replica of the codebase from that point in time.
+If you're coming from the Git versioning world of programming, you'll be familiar with the concept of a branch and regardless of your Git provider, GitHub, GitLab, BitBucket etc, code branching always works in the same way. You branch off from e.g main, which creates an exact replica of the codebase from that point in time.
 
-From here you’re able to develop new features, track down and fix bugs, all from the safety of an isolated environment and when you’re ready, you can create a Pull Request, then merge the changes back into the main branch.
+From here you're able to develop new features, track down and fix bugs, all from the safety of an isolated environment and when you're ready, you can create a Pull Request, then merge the changes back into the main branch.
 
 But, does database branching work in the same way?
 
-In this report we'll discuss: What a database branch is, the different ways they work and how much they cost for the following providers: [Neon](https://neon.tech/), [Supabase](https://supabase.com/) and [PlanetScale](https://planetscale.com/).
+In this report we'll discuss: What a database branch is, the different ways they work and how much they cost for the following providers: 
+- [Neon](https://neon.tech/)
+- [Supabase](https://supabase.com/)
+- [PlanetScale](https://planetscale.com/)
 
 ## What is a database branch?
 
@@ -41,7 +44,7 @@ At first glance, you might assume a database branch will work just like a code b
 
 #### Schema
 
-First there’s the database schema. This database schema lays out the structure of the data. Data types, table names, and the relationships between tables.
+First there's the database schema. This database schema lays out the structure of the data. Data types, table names, and the relationships between tables.
 
 #### Data
 
@@ -50,7 +53,7 @@ Secondly there's the actual data, and there could be loads of it!
   </div>
 </section>
 
-Understandably, for a database to be a database, both schema and data need to co-exist. So one would assume then, when creating a branch from e.g main, you’d create an exact replica of the schema and data from that point in time. Only some database providers work this way, while others only replicate the schema, and require you to seed the database with dummy data. There are pros and cons to each approach, and in the next section I’ll discuss what they are.
+Understandably, for a database to be a database, both schema and data need to co-exist. So one would assume then, when creating a branch from e.g main, you'd create an exact replica of the schema and data from that point in time. Only some database providers work this way, while others only replicate the schema, and require you to seed the database with dummy data. There are pros and cons to each approach, and in the next section we'll discuss what they are.
 
 ## Production vs synthetic data in database branches
 
@@ -60,27 +63,27 @@ Synthetic data relates to a database branch that only replicates the schema, but
 
 ### Is testing with synthetic data good?
 
-You can use synthetic data to test new features or investigate specific bugs. For instance, if you have populated your branch with synthetic data this approach would let you track down a bug for a field like `is_admin` that was mistakenly set to `VARCHAR(255)` instead of `BOOLEAN`, or perhaps you could create a new feature and add a new field, such as `user_age`, for a form. In these kinds of cases, synthetic data is fine as it’s the data types that matters, not the amount of data.
+You can use synthetic data to test new features or investigate specific bugs. For instance, if you have populated your branch with synthetic data this approach would let you track down a bug in your application for a field like `is_admin` that was mistakenly set to `VARCHAR(255)` instead of `BOOLEAN`, or perhaps you could create a new feature and add a new field, such as `user_age`, for a form. In these kinds of cases, synthetic data is fine as it's the data types that matters, not the amount of data.
 
 ### Is testing with production data better?
 
-Testing with a smaller amount of synthetic data means the database won’t behave as it does in production environments. Both PostgreSQL’s query planner and MySQL’s optimizer rely on data distribution statistics to create efficient execution plans. With production data, they can accurately assess whether to use an index or a sequential scan or pick the best path for complex queries involving joins and subqueries. With synthetic data, the lack of realistic distribution can cause the optimizer to make suboptimal choices. This can result in queries that appear fast in development / testing, but slow down significantly in production.
+Testing with a smaller amount of synthetic data means the database won't behave as it does in production environments. Both PostgreSQL's query planner and MySQL's optimizer rely on data distribution statistics to create efficient execution plans. With production data, they can accurately assess whether to use an index or a sequential scan, or pick the best path for complex queries involving joins and subqueries. With synthetic data, the lack of realistic distribution can cause the optimizer to make suboptimal choices. This can result in queries that appear fast in development / testing, but slow down significantly in production.
 
 ### Is production data safe to use?
 
 In some cases replicating production data is simply not permitted. Many industries such as healthcare, finance, education, insurance, and government, restrict access to customer data, making it challenging for developers to test against production data. In such cases, sensitive user data, or specific fields within specific tables must be anonymized, and if this is required for each and every branch that is created, it could take a significant amount of time to create a new branch and subsequently impact developer productivity.
 
-That said, many applications don’t contain PII (Personally Identifiable Information). PII generally refers to "user data", or more specifically, some fields within user tables but, in many cases, data stored in the database isn’t related to individual users at all. In these situations, you’d almost always want a branch that includes real production data.
+That said, many applications don't contain PII (Personally Identifiable Information). PII generally refers to "user data", or more specifically, some fields within user tables but, in many cases, data stored in the database isn't related to individual users at all. In these situations, you'd almost always want a branch that includes real production data.
 
 ### Key takeaways
 
-Ultimately, there’s no one-size-fits-all answer. If your data is sensitive, you’ll need to add a step to your branching process to either generate synthetic data, or anonymize production data. But if your data isn’t subject to PII regulations, branching with production data is often a better choice.
+Ultimately, there's no right answer. If your data is sensitive, you'll need to branch using schema-only and add a step to either generate synthetic data, or anonymize production data. But if your data isn't subject to PII regulations, branching with production data is often a better choice.
 
 <BranchTypesTable />
 
 ## Database branching workflows
 
-Like before, there’s no one-size fits all solution to database branching workflows.
+Like before, there's no right answer to database branching workflows.
 
 <section class='flex flex-col lg:flex-row gap-8'>
   <div class='w-full mx-auto min-w-[20rem] max-w-[20rem]'>
@@ -88,8 +91,8 @@ Like before, there’s no one-size fits all solution to database branching workf
   </div>
   <div>
     There are many scenarios when
-    there’s only one application using the database, and it can be helpful to link changes made to the database, with an
-    application Git branch so when changes are made, they happen simultaneously.
+    there's only one application using the database, and it can be helpful to link changes made to the database with an
+    application Git branch, so when changes are made, they happen simultaneously.
 
     But this only works with a **one-to-one** relationship, there are of course scenarios, generally with larger organizations, where the production database will be used by a number of applications.
 
@@ -100,15 +103,15 @@ Linking a database branch to a codebase branch, whilst helpful in the **one-to-o
 
 ### Key takeaways
 
-In almost all scenarios you’d probably want to keep the database branch completely separate from the codebase branches. This approach gives you much more flexibility to manage migrations and application updates.
+In almost all scenarios you'd probably want to keep the database branch completely separate from the codebase branches. This approach gives you much more flexibility to manage migrations and application updates.
 
 <BranchingWorkflowsTable />
 
-_It's also worth mentioning that certain database changes can be made without requiring any changes to the codebase, such as adding indexes, creating or modifying views, increasing column lengths, or setting default values._
+<small>_It's also worth mentioning that certain database changes can be made without requiring any changes to the codebase, such as adding indexes, creating or modifying views, increasing column lengths, or setting default values._</small>
 
 ## Branch creation speeds
 
-Creating a code branch is instant since it’s all normally local. But understandably, setting up a new branch of the database takes longer. How long depends on the technology your database provider uses. For example, if you’re using RDS, launching a new instance and provisioning resources can be a slow process. And as mentioned earlier, creating a schema only branch, setting up a production replica, adding seed data, or anonymizing production data can all add to the time it takes to spin up a database branch.
+Creating a code branch is instant since it's all usually local. But understandably, setting up a new branch of a managed serverless database takes longer. How long depends on the technology your database provider uses. For example, if you're using RDS, launching a new instance and provisioning resources can be a slow process. And as mentioned earlier, creating a schema only branch, setting up a production replica, adding seed data, or anonymizing production data can all add to the time it takes to spin up a database branch.
 
 The chart below shows the results of some tests we conducted using 30 MB of data split across two tables for [Neon](https://neon.tech/), [Supabase](https://supabase.com/) and [PlanetScale](https://planetscale.com/).
 
@@ -118,11 +121,11 @@ The chart below shows the results of some tests we conducted using 30 MB of data
 
 ### Key takeaways
 
-- With [Neon](https://neon.tech/) you get instant branches with schema + data and pretty soon Neon will have schema only branches (i’m going to assume they’ll be instant too, but let’s see)
+- With [Neon](https://neon.tech/) you get instant branches with schema + data and pretty soon Neon will have schema-only branches.
 
-- [Supabase](https://supabase.com/) only offers branching with schema only and took ~5 minutes to create a branch.
+- [Supabase](https://supabase.com/) only offers branching with schema-only and took ~5 minutes to create a branch.
 
-- [PlanetScale](https://planetscale.com/) offers both schema only, and schema + data (in beta with the Scaler Pro plan). We were only able to test schema only with PlanetScale, which was able to spin up a new branch in seconds rather than minutes.
+- [PlanetScale](https://planetscale.com/) offers both schema-only, and schema + data (in beta with the Scaler Pro plan). We were only able to test schema-only with PlanetScale, which was able to spin up a new branch in seconds rather than minutes.
 
 ## Branch Branching
 
@@ -146,32 +149,32 @@ Similar points to Database branching workflows. Needing to create a codebase bra
 
 ## Resource Isolation
 
-To cite RDS once again, typically when a “dev” instance is created it’ll use the same EC2 instance for compute.
+To cite RDS once again, typically when a “dev” instance is created it'll use the same EC2 instance for compute.
 
 <section class='flex flex-col lg:flex-row gap-8'>
   <div class='w-full mx-auto min-w-[18rem] max-w-[18rem]'>
      <img src={ResourceIsolationDiagram.src} alt='resource isolation diagram' />
   </div>
   <div>
- Depending on what kind of development work is being carried out will determine how much of the EC2’s compute is used, but regardless, it’s all still taking compute power away from the production database. Many of you will know this as the **noisy neighbor** effect.
+ Depending on what kind of development work is being carried out will determine how much of the EC2's compute is used, but regardless, it's all still taking compute power away from the production database. Many of you will know this as the **noisy neighbor** effect.
 
   </div>
 </section>
 
 ### Key takeaways
 
-With all of the following providers, each branch is given its own compute. Any work being carried out on a branch won’t use resources assigned to the production environment resulting in no performance implications on the production database / end user.
+With all of the following providers, each branch is given its own compute. Any work being carried out on a branch won't use resources assigned to the production environment resulting in no performance implications on the production database / end user.
 
 <ResourceIsolationTable />
 
 ## The cost of database branches
 
-Running multiple database environments can add up fast. With RDS, for example, having "dev" and "test" databases running along with production database could triple your monthly costs. Branches are usually cheaper, but providers don’t all charge the same way for storage and compute. Without careful budgeting, you might still end up with a surprisingly high bill each month.
+Running multiple database environments can add up fast. With RDS, for example, having "dev" and "test" databases running along with production database could triple your monthly costs. Branches are usually cheaper, but providers don't all charge the same way for storage and compute. Without careful budgeting, you might still end up with a surprisingly high bill each month.
 
 ### Key Takeaways
 
 **Disclaimer**
-_We’ve done our best to understand pricing, and it’s a pretty complicated area so check with each provider to confirm the latest pricing options._
+_We've done our best to understand pricing, and it's a pretty complicated area so check with each provider to confirm the latest pricing options._
 
 <section class='flex flex-col lg:flex-row gap-8'>
   <div class='w-full mx-auto min-w-[14rem] max-w-[14rem]'>
@@ -183,7 +186,7 @@ _We’ve done our best to understand pricing, and it’s a pretty complicated ar
 
     In contrast, neither
     [Supabase](https://supabase.com/) or [PlanetScale](https://planetscale.com/) include branching in their free plans,
-    and both base their charges on usage time. Supabase charges **~$0.32** per branch per day, even if the branch isn’t
+    and both base their charges on usage time. Supabase charges **~$0.32** per branch per day, even if the branch isn't
     active. PlanetScale, on the other hand gives **~1,440** free hours, and only charges when a branch is in use, at a
     rate of **$0.014** per hour once you exceed the free allowance.
 
@@ -194,6 +197,6 @@ _We’ve done our best to understand pricing, and it’s a pretty complicated ar
 
 ## Finished
 
-We hope this report gives you a clearer overview of the branching options currently available, along with some key considerations — including a few things you may not have thought of before. We’ve spent a good amount of time exploring branching solutions, and there’s a lot to unpack.
+We hope this report gives you a clearer overview of the branching options currently available, along with some key considerations — including a few things you may not have thought of before. We've spent a good amount of time exploring branching solutions, and there's a lot to unpack.
 
-But to us the choice is clear. If you’re working with Postgres and need branching, [Neon](https://neon.tech/) appears to be the most practical solution. The only feature it’s missing right now is **schema only** branches, but rumor has it this feature is coming in 2025, so stay tuned!
+But to us the choice is clear. If you're working with Postgres and need branching, [Neon](https://neon.tech/) appears to be the most practical solution. The only feature it's missing right now is **schema-only** branches, but rumor has it this feature is coming in 2025, so stay tuned!

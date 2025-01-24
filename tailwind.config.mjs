@@ -66,6 +66,13 @@ export default {
                 content: '"" !important',
               },
             },
+
+            ul: {
+              li: {
+                padding: 0,
+                margin: 0
+              }
+            },
           },
         },
       }),
