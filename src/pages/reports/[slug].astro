@@ -37,17 +37,21 @@ const { Content, headings } = await report.render();
   title={title}
   slug={`/${collection}/${slug}`}
   description={description}
-  image='/images/databranching-report-branching.jpg'
+  image='/images/databranching-report-branching-image.jpg'
 >
   <div class='block'>
     <aside class='relative'>
-      <div class='fixed hidden xl:block top-8 bottom-0 right-[max(0px,calc(50%-42rem))] w-96 p-8 overflow-y-auto z-10'>
+      <div
+        class='fixed hidden xl:block top-8 bottom-0 right-[max(0px,calc(50%-42rem))] w-96 p-8 overflow-y-auto z-10'
+      >
         <TableOfContents headings={headings} />
       </div>
     </aside>
     <div class='relative -mt-6 w-full xl:w-9/12'>
       <a class='text-xs uppercase hover:text-brand-text' href='/'>Back</a>
-      <h1 class='text-2xl sm:text-4xl font-heading uppercase font-bold mb-4'>{title}</h1>
+      <h1 class='text-2xl sm:text-4xl font-heading uppercase font-bold mb-4'>
+        {title}
+      </h1>
       <Content />
       <hr />
       <SiteFooter />

@@ -21,7 +21,7 @@ const { title, description, slug, image, canonical } = Astro.props;
 
 const name = 'Data Branching';
 const siteUrl = 'https://www.databranching.com';
-const defaultImage = '/images/databranching-open-graph.jpg';
+const defaultImage = '/images/databranching-open-graph-image.jpg';
 
 const htmlTitle = `${name} | ${title}`;
 const canonicalHref = canonical ? canonical : `${siteUrl}${slug}`;
@@ -58,8 +58,20 @@ const ogImage = image ? image : `${siteUrl}${defaultImage}`;
 
     <!-- Favicons -->
     <link rel='icon' type='image/x-icon' href='/favicon.ico' />
-    <link rel='icon' type='image/png' sizes='16x16' href='/favicon-16x16.png' data-react-helmet='true' />
-    <link rel='icon' type='image/png' sizes='32x32' href='/favicon-32x32.png' data-react-helmet='true' />
+    <link
+      rel='icon'
+      type='image/png'
+      sizes='16x16'
+      href='/favicon-16x16.png'
+      data-react-helmet='true'
+    />
+    <link
+      rel='icon'
+      type='image/png'
+      sizes='32x32'
+      href='/favicon-32x32.png'
+      data-react-helmet='true'
+    />
   </head>
   <body class='bg-brand-background min-w-[320px]'>
     <main class={`p-8 sm:px-16 sm:py-20 mx-auto max-w-6xl ${className}`}>
